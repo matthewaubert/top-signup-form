@@ -11,6 +11,7 @@
 
 :root {
   --font-size-sm: 0.75rem;
+  --plant-green: #596D48;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
@@ -21,13 +22,14 @@
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 5.5rem;
   font-family: "norse-bold", fantasy;
 }
 
 h3 {
   font-weight: 500;
   font-size: 1.3rem;
+  max-width: 55ch;
 }
 
 button,
@@ -48,7 +50,7 @@ body {
 /* hero sidebar */
 
 #hero {
-  background-color: forestgreen;
+  background-color:var(--plant-green);
   background-image: url("./img/hero-bg.jpg");
   background-position: center;
   background-size: cover;
@@ -62,12 +64,12 @@ body {
 }
 
 #banner {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  height: 8rem;
+  height: 8.5rem;
   width: 100%;
 }
 
@@ -129,8 +131,9 @@ div button:first-child {
 .form-row label {
   display: block;
   font-size: var(--font-size-sm);
-  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   margin-bottom: 0.25rem;
+  text-transform: uppercase;
 }
 
 .form-row input {
@@ -143,5 +146,29 @@ div button:first-child {
 }
 
 #submit button {
-  height: 2.5rem;
+  background-color: var(--plant-green);
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  height: 2.7rem;
+}
+
+#submit button:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+#submit button:active {
+  filter: brightness(80%);
+}
+
+#submit a {
+  color: var(--plant-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#submit a:hover {
+  text-decoration: underline;
 }
