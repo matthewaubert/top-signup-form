@@ -1,6 +1,16 @@
 /* general */
 
+@font-face {
+  font-family: "norse-bold";
+  src:
+    url("./fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("./fonts/norse-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
+  --font-size-sm: 0.75rem;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
@@ -11,7 +21,8 @@
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 6rem;
+  font-family: "norse-bold", fantasy;
 }
 
 h3 {
@@ -38,6 +49,9 @@ body {
 
 #hero {
   background-color: forestgreen;
+  background-image: url("./img/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
   color: white;
   display: flex;
   flex-direction: column;
@@ -65,6 +79,15 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
+  font-size: var(--font-size-sm);
+}
+
+#hero p a {
+  color: white;
+}
+
+#hero p a:hover {
+  text-decoration: none;
 }
 
 /* main content */
@@ -105,7 +128,7 @@ div button:first-child {
 
 .form-row label {
   display: block;
-  font-size: .75rem;
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
