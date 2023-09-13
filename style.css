@@ -1,0 +1,55 @@
+/* general */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+select {
+  appearance: none;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+/* hero sidebar */
+
+#hero {
+  background-color: forestgreen;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 38%;
+  position: relative;
+}
+
+#banner {
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 8rem;
+  width: 100%;
+}
+
+#banner img {
+  height: 85%;
+}
+
+#hero p {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
