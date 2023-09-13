@@ -30,32 +30,32 @@
         <form action="" method="get" id="signup-form">
           <div class="form-row">
             <label for="fname">First Name</label>
-            <input id="fname" name="fname" type="text">
+            <input class="format" id="fname" name="fname" type="text" pattern="[a-zA-Z.,'\/\- ]+" placeholder="Sam">
             <span></span>
           </div>
           <div class="form-row">
             <label for="lname">Last Name</label>
-            <input id="lname" name="lname" type="text">
+            <input class="format" id="lname" name="lname" type="text" pattern="[a-zA-Z.,'\/\- ]+" placeholder="Smith">
             <span></span>
           </div>
           <div class="form-row">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email">
+            <input class="format" id="email" name="email" type="email" placeholder="example@gmail.com">
             <span></span>
           </div>
           <div class="form-row">
             <label for="phone">Phone Number</label>
-            <input id="phone" name="phone" type="tel">
+            <input class="format" id="phone" name="phone" type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" placeholder="123-456-7890">
             <span></span>
           </div>
           <div class="form-row">
             <label for="pwd1">Password</label>
-            <input id="pwd1" name="pwd1" type="password">
+            <input class="error" id="pwd1" name="pwd1" type="password" placeholder="••••••••••">
             <span></span>
           </div>
           <div class="form-row">
             <label for="pwd2">Confirm Password</label>
-            <input id="pwd2" name="pwd2" type="password">
+            <input class="error" id="pwd2" name="pwd2" type="password" placeholder="••••••••••">
             <span></span>
           </div>
         </form>

@@ -103,7 +103,7 @@ body {
 }
 
 #content > * {
-  padding: 2.5rem 3rem;
+  padding: 2rem 3rem;
 }
 
 #content h3:not(:last-child),
@@ -115,13 +115,13 @@ div button:first-child {
 
 #input {
   background-color: white;
-  box-shadow: 0 3px 12px lightgray;
+  box-shadow: 0 0 12px lightgray;
 }
 
 #signup-form {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1.35rem;
 }
 
 .form-row {
@@ -138,7 +138,44 @@ div button:first-child {
 
 .form-row input {
   height: 1.7rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 0.5rem;
+  outline: none;
 }
+
+.form-row input:hover,
+.form-row input:focus {
+  filter: brightness(96%);
+}
+
+.form-row input:focus {
+  outline: 1px solid #008cff;
+  box-shadow: 2px 2px 5px lightgray;
+}
+
+.form-row input::placeholder {
+  color: lightgray;
+}
+
+.form-row input:invalid {
+  outline: 1px solid red;
+}
+
+.form-row input.format + span {
+  position: relative;
+}
+
+.form-row input.format:invalid + span::after {
+  color: red;
+  content: "* Invalid format";
+  font-size: 0.7rem;
+  position: absolute;
+  top: 1.7rem;
+  left: -14rem;
+}
+
+/* submit */
 
 #submit button,
 .form-row input {
