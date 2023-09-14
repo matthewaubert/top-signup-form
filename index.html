@@ -51,12 +51,11 @@
           <div class="form-row">
             <label for="pwd1">Password</label>
             <input class="error" id="pwd1" name="pwd1" type="password" placeholder="••••••••••">
-            <span></span>
+            <span id="error-display">* Passwords do not match</span>
           </div>
           <div class="form-row">
             <label for="pwd2">Confirm Password</label>
             <input class="error" id="pwd2" name="pwd2" type="password" placeholder="••••••••••">
-            <span></span>
           </div>
         </form>
       </div>
@@ -65,5 +64,26 @@
         <p>Already have an account? <a href="">Log in</a></p>
       </div>
     </div>
+
+    <script>
+      const passwords = document.querySelectorAll('.error');
+      const errorDisplay = document.querySelector('#error-display');
+      // add event listener to password inputs
+      passwords.forEach(pwd => pwd.addEventListener('input', checkMatch));
+
+      // function to check if passwords match
+      function checkMatch() {
+        // if passwords don't match
+        if (passwords[0].value != passwords[1].value) {
+          errorDisplay.style.visibility = 'visible'; // display error below input
+          // change password fields to invalid
+          passwords.forEach(pwd => pwd.setCustomValidity('Invalid field'));
+        } else {
+          errorDisplay.style.visibility = 'hidden'; // else, hide message
+          // change password fields to valid
+          passwords.forEach(pwd => pwd.setCustomValidity(''));
+        }
+      }
+    </script>
   </body>
 </html>

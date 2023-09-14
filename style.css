@@ -126,6 +126,7 @@ div button:first-child {
 
 .form-row {
   margin-right: 2rem;
+  position: relative;
 }
 
 .form-row label {
@@ -158,7 +159,7 @@ div button:first-child {
   color: lightgray;
 }
 
-.form-row input:invalid {
+.form-row input:invalid:not(:focus) {
   outline: 1px solid red;
 }
 
@@ -166,13 +167,23 @@ div button:first-child {
   position: relative;
 }
 
-.form-row input.format:invalid + span::after {
+.form-row input.format:invalid + span::after,
+.form-row #error-display {
   color: red;
-  content: "* Invalid format";
   font-size: 0.7rem;
   position: absolute;
+}
+
+.form-row input.format:invalid:not(:focus) + span::after {
+  content: "* Invalid format";
   top: 1.7rem;
   left: -14rem;
+}
+
+.form-row #error-display {
+  top: 3rem;
+  left: 0;
+  visibility: hidden;
 }
 
 /* submit */
